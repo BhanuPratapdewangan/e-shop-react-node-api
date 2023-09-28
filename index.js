@@ -76,7 +76,7 @@ app.get('/product-list', verifyToken, async(req, res) => {
     }
 })
 
-// Delete Product API's
+// Delete Product 
 app.delete('/delete-product/:id', verifyToken, async(req, res) => {
 
     let data = await productModel.deleteOne({_id:req.params.id});
